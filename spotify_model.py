@@ -3,9 +3,10 @@ import joblib
 import pandas as pd
 import os
 
-# Ruta absoluta basada en la ubicación del script
+# Ruta compatible con Render y con ejecución local
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model = joblib.load(os.path.join(BASE_DIR, "catboost_model_a.pkl"))
+MODEL_PATH = os.path.join(BASE_DIR, "catboost_model_a.pkl")
+model = joblib.load(MODEL_PATH)
 
 def predict_popularity(duration_ms, danceability, energy, loudness,
                        speechiness, acousticness, instrumentalness,
