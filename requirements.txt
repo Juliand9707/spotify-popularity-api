@@ -4,3 +4,5 @@ catboost
 pandas
 numpy
 gunicorn
+joblib
+scikit-learn
