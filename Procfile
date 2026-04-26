@@ -1,0 +1,1 @@
+web: gunicorn spotify_api:app
